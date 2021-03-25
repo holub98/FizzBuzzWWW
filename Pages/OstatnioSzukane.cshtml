@@ -1,0 +1,13 @@
+﻿@page
+@model OstatnioSzukaneModel
+@{
+    ViewData["Title"] = "Ostatnio szukana";
+}
+<h1>@ViewData["Title"] rozwiązania Fizz Buzz: </h1>
+
+@if (Model.FizzBuzz != null )
+{
+                <p>Szukana liczba @Model.FizzBuzz.Liczba </p>
+                <p>Wynik wyszukiwania @Model.FizzBuzz.GetResult() </p>
+                <p>Czas ostatniego szukania @Model.FizzBuzz.OstatnioSzukane</p>
+            }
