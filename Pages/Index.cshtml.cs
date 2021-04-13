@@ -29,7 +29,9 @@ namespace FizzBuzzWWW.Pages
         {
             if (ModelState.IsValid)
             {
-               
+                HttpContext.Session.SetString("SessionFizzBuzz",
+JsonConvert.SerializeObject(FizzBuzz));
+
                 return Page();
             }
             return Page();
